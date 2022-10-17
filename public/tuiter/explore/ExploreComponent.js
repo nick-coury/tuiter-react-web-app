@@ -1,5 +1,5 @@
 
-import PostSummaryList from "../PostSummaryList";
+import PostSummaryList from "../PostSummaryList/index.js";
 
 const RenderExploreComponent = () => {
     return(`
