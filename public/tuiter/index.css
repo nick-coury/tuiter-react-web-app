@@ -36,12 +36,14 @@
     color: #0d6efd;
 }
 
-.wd-bg-color-black {
-    background-color: black;
-}
+
 
 .wd-bg-color-gray {
     background-color: #282828;
+}
+
+.wd-bg-color-black {
+    background-color: #000000;
 }
 
 .wd-padding-all-around {
