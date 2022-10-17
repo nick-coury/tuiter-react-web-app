@@ -1,7 +1,7 @@
 
 import PostSummaryList from "../PostSummaryList";
 
-const ExploreComponent = () => {
+const RenderExploreComponent = () => {
     return(`
             <div class="row">
                        <div class="row">
@@ -48,4 +48,4 @@ const ExploreComponent = () => {
            ${PostSummaryList()}
     `);
 }
-export default ExploreComponent;
+export default RenderExploreComponent;

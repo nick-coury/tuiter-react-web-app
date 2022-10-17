@@ -1,7 +1,7 @@
 import NavigationSidebar from "../NavigationSidebar/index.js";
-import RenderWhoToFollowList from "../WhoToFollowList";
+import RenderWhoToFollowList from "../WhoToFollowList/index.js";
 
-import ExploreComponent from "./ExploreComponent.js";
+import RenderExploreComponent from "./ExploreComponent.js";
 
 function exploreComponent() {
     $('#wd-explore').append(`
@@ -10,7 +10,7 @@ function exploreComponent() {
                 ${NavigationSidebar()}
             </div>
             <div class="col-10 col-lg-7 col-xl-6 ">
-                ${ExploreComponent()}
+                ${RenderExploreComponent()}
                 
             </div>
             <div class="d-none d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4 ">
