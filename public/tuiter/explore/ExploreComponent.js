@@ -38,7 +38,7 @@ const RenderExploreComponent = () => {
                 </ul>
            </ul>
            <div class="card">
-                <img class="card-img-top col-12" src="starship.jpeg"/>
+                <img class="card-img-top col-12" src="../../images/starship.jpeg"/>
                 <div class="text-stroke text-white card-img-overlay d-flex align-items-end">
                     <h4 class="card-title">
                         SpaceX's Starship
