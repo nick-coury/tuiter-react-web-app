@@ -1,18 +1,37 @@
 import React from "react";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import TuitItem
     from "./TuitItem";
 
-const PostSummaryList = () => {
-    const postsArray = useSelector(state => state.tuits)
+import React, {useEffect} from "react";
+import {findTuitsThunk} from "../../services/tuits-thunks";
+
+
+const TuitsList = () => {
+    const {tuits, loading} = useSelector(state => state.tuitsData)
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(findTuitsThunk())
+    }, [dispatch])
+
     return(
-        <ul className="list-group">
+        <div className="list-group">
+            {/* if loading flag is true, then show a loading message while data is stillcoming back from the server*/}
             {
-                postsArray.map(post =>
-                    <TuitItem
-                        key={post._id} post={post}/> )
+                loading &&
+                <li className="list-group-item">
+                    Loading...
+                </li>
             }
-        </ul>
-    );
-};
-export default PostSummaryList;
+            {
+                tuits.map(tuit => {
+                    return(<TuitItem key={tuit._id} tuit={tuit}/>)
+                })
+            }
+        </div>
+    )
+}
+
+export default TuitsList;

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 const NavigationSidebar = (
     {
         active = 'explore'
@@ -7,14 +8,22 @@ const NavigationSidebar = (
     return (
         <div className="list-group">
             <a className="list-group-item">Tuiter</a>
-            <a className={`list-group-item
-                    ${active === 'home'?'active':''}`}>
+            <Link to="/tuiter/" className={`list-group-item list-group-item-action d-none d-xl-block d-xxl-block ${active === 'home'?'active':''}`}>
+                <i class="bi bi-house-fill"></i>
                 Home
-            </a>
-            <a className={`list-group-item
-                    ${active === 'explore'?'active':''}`}>
+            </Link>
+            <Link to="/tuiter/" className={`list-group-item list-group-item-action d-block d-xl-none d-xxl-none ${active === 'home'?'active':''}`}>
+                <i class="bi bi-house-fill"></i>
+            </Link>
+
+            <Link to="/tuiter/Explore" className={`list-group-item list-group-item-action d-none d-xl-block d-xxl-block ${active === 'explore'?'active':''}`}>
+
                 Explore
-            </a>
+            </Link>
+            <Link to="/tuiter/Explore" className={`list-group-item list-group-item-action d-block d-xl-none d-xxl-none ${active === 'explore'?'active':''}`}>
+
+            </Link>
+
             <a className={`list-group-item
                     ${active === 'notifications'?'active':''}`}>
                 Notifications
